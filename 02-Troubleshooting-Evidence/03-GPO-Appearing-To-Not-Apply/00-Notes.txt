@@ -1,0 +1,25 @@
+Ticket: GPO appeared not to apply when validating policy results on workstation
+
+Impact:
+This created uncertainty about whether the workstation baseline policy was being enforced correctly on the domain-joined client.
+
+Symptoms:
+
+* Baseline workstation GPO appeared not to apply when running `gpresult /r`.
+* No policies visible under **User Settings**.
+* Workstation configuration changes expected from GPO were not immediately confirmed.
+
+Troubleshooting:
+
+* Verified workstation computer object location in Active Directory.
+* Confirmed baseline GPO was linked to **Workstations OU**.
+* Ran `gpupdate /force` on workstation.
+* Ran `gpresult /r` to review applied policies.
+* Reviewed **User Settings** section initially and observed no applied GPOs.
+* Rechecked results under **Computer Settings**.
+* Confirmed workstation baseline GPO listed under computer policy scope.
+
+Resolution:
+GPO was correctly applied to the workstation computer object.
+Initial validation focused on **User Settings**, while the policy was a **Computer Configuration policy linked to the Workstations OU**.
+Policy application confirmed under **Computer Settings** using `gpresult`.

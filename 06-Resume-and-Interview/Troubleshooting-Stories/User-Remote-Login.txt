@@ -1,0 +1,11 @@
+I created mlinton (user), then later created Remote Workstation Users and nested Workstation Users into it. In principle, a fresh RDP logon should have been able to use that nested membership. Since it did not work immediately, the problem was probably in how the target machine was evaluating or applying the resource-side authorization path at that moment, not because the user account predated the nested group.
+
+The failure was not caused by the user account being older than the nested group.
+A fresh logon should evaluate the user's current transitive group memberships.
+The more likely issue was that the intended nested authorization path was not being realized effectively on the target machine at the time of testing, while the direct group assignment provided a clearer working access path.
+
+The lesson is “my nested path did not become effective the way I expected during that test.”
+
+enterprises use nested groups for manageability, but they still troubleshoot the effective access path when a specific resource test fails. The temporary direct add is a troubleshooting shortcut, not proof that the nesting model is bad.
+
+The nested design was valid in principle, but in my lab the effective RDP authorization path through that nesting was not working at test time. Adding the non-nested group directly to the target machine’s Remote Desktop Users group created a shorter and clearly effective access path, which is why the login succeeded.

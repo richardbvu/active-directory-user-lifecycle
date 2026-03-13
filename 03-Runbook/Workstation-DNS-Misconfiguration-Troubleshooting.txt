@@ -1,0 +1,60 @@
+Title: Workstation DNS Misconfiguration Troubleshooting
+
+# Workstation Unable to Reach Domain Services Due to Incorrect DNS Configuration
+
+## Purpose
+Use this runbook when a domain-joined workstation cannot reach domain services because DNS is incorrectly configured.
+
+## Scope
+Windows domain-joined lab systems in corp.test.
+
+## Common Symptoms
+- Workstation cannot resolve corp.test
+- Domain controller cannot be reached by name
+- Domain-based functions fail or behave unexpectedly
+- nslookup corp.test returns incorrect results or fails
+
+## Quick Rule
+Domain-joined workstations should use internal Active Directory DNS servers, typically the domain controller IP address.
+
+Using public DNS servers such as 8.8.8.8 will prevent the workstation from locating domain services.
+
+## Troubleshooting Steps
+
+### 1. Verify workstation DNS configuration
+Open network adapter settings and confirm the Preferred DNS Server.
+
+The DNS server should point to the domain controller IP.
+
+### 2. Check current network configuration
+Run the command:
+
+ipconfig /all
+
+Verify the DNS server listed matches the domain controller.
+
+### 3. Test domain name resolution
+Run the command:
+
+nslookup corp.test
+
+If DNS is misconfigured, the domain may fail to resolve or return incorrect results.
+
+### 4. Correct the DNS configuration
+Change the workstation DNS server to the domain controller IP address.
+
+### 5. Refresh network resolution if needed
+If name resolution still appears incorrect after fixing DNS, run:
+
+ipconfig /flushdns
+
+Then verify configuration again:
+
+ipconfig /all
+
+### 6. Validate domain resolution
+Run the command:
+
+nslookup corp.test
+
+Confirm the domain now resolves correctly and domain services are reachable.

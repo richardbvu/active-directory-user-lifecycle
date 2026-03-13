@@ -1,0 +1,42 @@
+# GPO Application Verification
+
+## Purpose
+Use this runbook when a Group Policy Object appears not to apply to a workstation or user.
+
+## Scope
+Windows domain-joined lab systems in `corp.test`.
+
+## Common Symptoms
+- Expected GPO settings do not appear on the workstation
+- `gpresult /r` seems to show no applied GPOs
+- A GPO is linked in GPMC, but the expected effect is missing
+
+## Quick Rule
+Always verify whether the GPO is a:
+- **Computer Configuration** policy
+- **User Configuration** policy
+
+Do not assume a missing GPO under **User Settings** means the GPO failed.
+
+## Troubleshooting Steps
+
+### 1. Identify the policy type
+Check the GPO in Group Policy Management and determine whether the setting is under:
+- **Computer Configuration**
+- **User Configuration**
+
+### 2. Verify OU placement
+Confirm the target object is in the correct OU:
+- computer policies apply to the **computer object**
+- user policies apply to the **user object**
+
+### 3. Verify the GPO link
+In Group Policy Management:
+- confirm the GPO is linked to the correct OU
+- confirm the link is enabled
+
+### 4. Refresh policy
+On the target workstation, run:
+
+cmd
+gpupdate /force

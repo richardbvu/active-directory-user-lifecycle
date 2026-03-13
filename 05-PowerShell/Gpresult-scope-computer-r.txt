@@ -1,0 +1,57 @@
+Command:
+gpresult /scope computer /r
+
+Purpose:
+Retrieve the Resultant Set of Policy (RSoP) for the W11VM computer to verify which Group Policy Objects are applied to the workstation.
+
+Output:
+Microsoft (R) Windows (R) Operating System Group Policy Result tool v2.0
+© Microsoft Corporation. All rights reserved.
+
+Created on ‎3/‎10/‎2026 at 10:12:07 AM
+
+
+RSOP data for  on W11VM : Logging Mode
+---------------------------------------
+
+OS Configuration:            Member Workstation
+OS Version:                  10.0.26200
+Site Name:                   Default-First-Site-Name
+Roaming Profile:
+Local Profile:
+Connected over a slow link?: No
+
+
+COMPUTER SETTINGS
+------------------
+    CN=W11VM,OU=Workstations,OU=CORP1,DC=corp,DC=test
+    Last time Group Policy was applied: 3/10/2026 at 10:04:29 AM
+    Group Policy was applied from:      WIN-T9RSU855B5R.corp.test
+    Group Policy slow link threshold:   500 kbps
+    Domain Name:                        CORP
+    Domain Type:                        Windows 2008 or later
+
+    Applied Group Policy Objects
+    -----------------------------
+        CORP1-Workstation-RDP
+        Remote-Workstations-Users-RDP
+        CORP1-Workstation-RDP
+        Default Domain Policy
+
+    The following GPOs were not applied because they were filtered out
+    -------------------------------------------------------------------
+        Local Group Policy
+            Filtering:  Not Applied (Unknown Reason)
+
+    The computer is a part of the following security groups
+    -------------------------------------------------------
+        BUILTIN\Administrators
+        Everyone
+        BUILTIN\Users
+        NT AUTHORITY\NETWORK
+        NT AUTHORITY\Authenticated Users
+        This Organization
+        W11VM$
+        Domain Computers
+        Authentication authority asserted identity
+        System Mandatory Level

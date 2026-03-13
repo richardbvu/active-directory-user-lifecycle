@@ -1,0 +1,23 @@
+# RDP Admin Login Troubleshooting
+
+## Purpose
+Use this runbook when an administrator account cannot sign in to a workstation through Remote Desktop.
+
+## Scope
+Windows domain-joined workstation in the lab environment.
+
+## Symptoms
+- Administrator account cannot log in through RDP
+- RDP may be enabled, but admin access still fails
+- Standard troubleshooting suggests the account should already have access
+
+## Checks
+1. Confirm the target workstation is powered on and reachable
+2. Confirm Remote Desktop is enabled on the target workstation
+3. Confirm the administrator account is enabled and not locked out
+4. Confirm the account is actually a member of a group that gives admin rights on the target machine
+5. Confirm the account is effectively included in local `Administrators` or local `Remote Desktop Users`
+6. Confirm the account is allowed by policy to log on through Remote Desktop Services
+7. Confirm there is no policy or local setting denying remote logon
+8. After changes, sign out and test again with a fresh logon
+9. Run policy refresh if needed and retest

@@ -1,0 +1,6 @@
+
+Phase 1A focused on building and validating the core components of an Active Directory lab environment. This included configuring a domain controller, joining a Windows 11 workstation to the domain, validating user authentication, and implementing baseline workstation Group Policy settings.
+
+During this phase, multiple realistic troubleshooting scenarios were created and documented to simulate common support issues. These included DNS misconfiguration preventing domain services resolution, disabled user accounts preventing authentication, RDP access issues after organizational unit changes, and Group Policy validation confusion during workstation policy testing.
+
+Each issue was investigated using standard administrative tools and command-line diagnostics such as ipconfig, nslookup, and gpresult. The troubleshooting process and resolutions were documented through tickets, runbooks, and supporting evidence to demonstrate a structured approach to diagnosing and resolving common Active Directory and workstation support problems.

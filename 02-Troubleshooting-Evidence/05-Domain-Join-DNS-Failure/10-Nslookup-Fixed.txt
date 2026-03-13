@@ -1,0 +1,5 @@
+Server:  UnKnown
+Address:  192.168.0.196
+
+Name:    corp.test
+Address:  192.168.0.196

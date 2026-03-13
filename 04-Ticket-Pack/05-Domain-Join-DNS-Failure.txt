@@ -1,0 +1,24 @@
+Ticket: Workstation unable to reach domain services due to incorrect DNS configuration
+
+Impact:
+The workstation could not reliably reach domain services, which disrupted domain-based management and validation tasks on the client.
+
+Symptoms:
+
+* `corp.test` could not be resolved correctly.
+* Domain controller could not be contacted by name.
+* Domain-dependent functions on the workstation were affected.
+* The workstation remained joined to the domain but could not properly reach domain services.
+
+Troubleshooting:
+
+* Checked workstation DNS configuration.
+* Ran `ipconfig /all` to review network settings.
+* Ran `nslookup corp.test` to test domain name resolution.
+* Verified that the DNS server was not pointing to the domain controller.
+* Confirmed the workstation could not correctly resolve domain resources.
+* Corrected the DNS configuration to use the domain controller IP.
+* Retested name resolution and domain connectivity.
+
+Resolution:
+The workstation was using an incorrect DNS server, which prevented it from properly locating domain services for `corp.test`. After correcting DNS to point to the domain controller, domain name resolution and workstation communication with domain services were restored.

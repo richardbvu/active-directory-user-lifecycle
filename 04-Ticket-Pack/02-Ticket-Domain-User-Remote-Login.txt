@@ -1,0 +1,35 @@
+Ticket: Domain user unable to log in remotely to W11VM
+
+Problem:
+- User mlinton could not remotely sign in to W11VM even though the workstation was domain joined and reachable
+
+Goal:
+- Validate that a normal domain user could remotely log in to the Windows 11 client VM as part of the AD user lifecycle lab
+
+What was already true:
+- W11VM was joined to corp.test
+- W11VM computer object existed in AD
+- W11VM was moved into the correct current OU tree under Corp1\Workstations
+- Admin remote login worked
+
+What I checked:
+- local Remote Desktop Users membership on W11VM
+- gpresult / computer policy application
+- Allow log on through Remote Desktop Services
+- Deny log on through Remote Desktop Services
+- Access this computer from the network
+- AD group design for remote access
+
+What I changed:
+- created / used centralized remote-access group design
+- nested GG-Workstation-Users and GG-IT-Helpdesk under GG-Remote-Workstation-Users
+- linked a workstation GPO to manage remote access
+- corrected the earlier RDS allow-right issue so the workstation returned to the normal effective state
+- tested direct-group membership path in local Remote Desktop Users
+
+Result:
+- remote login worked after using the direct role-group membership path
+- this isolated the issue to the nested-group access path / effective token path during remote logon testing
+EDIT: The failure was not caused by the user account being older than the nested group.
+A fresh logon should evaluate the user's current transitive group memberships.
+The more likely issue was that the intended nested authorization path was not being realized effectively on the target machine at the time of testing, while the direct group assignment provided a clearer working access path.

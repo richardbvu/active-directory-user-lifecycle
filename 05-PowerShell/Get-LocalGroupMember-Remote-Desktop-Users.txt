@@ -1,0 +1,11 @@
+Command:
+Get-LocalGroupMember "Remote Desktop Users"
+
+Purpose:
+Verify which security groups and accounts are members of the local Remote Desktop Users group on W11VM to confirm RDP access permissions.
+
+Output:
+ObjectClass Name                             PrincipalSource
+----------- ----                             ---------------
+Group       CORP\Domain Admins               ActiveDirectory
+Group       CORP\GG-Remote-Workstation-Users ActiveDirectory

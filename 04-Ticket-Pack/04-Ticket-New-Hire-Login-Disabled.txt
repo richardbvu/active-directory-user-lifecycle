@@ -1,0 +1,24 @@
+Ticket: Domain user unable to log in due to disabled account
+
+Impact:
+User onboarding validation could not be completed because the domain user was unable to authenticate to the workstation.
+
+Symptoms:
+- Domain user unable to log in to the workstation using domain credentials.
+- Login attempt failed during domain authentication.
+- Workstation was domain joined and reachable.
+- Other domain accounts were able to log in successfully.
+
+Troubleshooting:
+- Attempted login using domain credentials.
+- Verified workstation was joined to corp.test.
+- Confirmed the user account existed in Active Directory Users and Computers.
+- Checked account status in ADUC.
+- Observed the account was disabled.
+- Verified account status using PowerShell.
+- Enabled the user account in Active Directory.
+- Retested login from the workstation.
+
+Resolution:
+The user account had been created but was not enabled in Active Directory.
+After enabling the account, the user was able to successfully authenticate to the workstation.

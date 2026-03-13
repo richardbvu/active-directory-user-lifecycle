@@ -1,0 +1,21 @@
+Ticket: RDP login failure after moving workstation computer to Corp1 OU.
+
+Impact:
+Remote administrative access to the workstation was temporarily unavailable, preventing RDP-based management until the correct policy was applied and credentials refreshed.
+
+Symptoms:
+- RDP connection denied.
+- Local "Remote Desktop Users" group initially empty.
+
+Troubleshooting:
+- Verified Remote Desktop enabled.
+- Checked local group membership.
+- Added CORP/Domain Admins to Remote Desktop Users under Computer Management\Local Users and Groups\Groups
+- Verified GPO scope and OU placement.
+- Linked Corp1-Workstation-RDP policy to Corp1 OU.
+- Forced policy refresh.
+- Refresh credentials
+
+
+Resolution:
+RDP login successful after policy applied and group membership validated and refresh credentials

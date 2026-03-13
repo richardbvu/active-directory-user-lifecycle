@@ -1,0 +1,17 @@
+Command:
+Get-ADUser -Identity mlinton
+
+Purpose:
+Retrieve the Active Directory user object for mlinton and verify basic account identity, location, and enabled status.
+
+Output:
+DistinguishedName : CN=Maya Linton,OU=Corp Users,OU=CORP1,DC=corp,DC=test
+Enabled           : True
+GivenName         : Maya
+Name              : Maya Linton
+ObjectClass       : user
+ObjectGUID        : ba6ccb94-5371-46e5-ae7f-dede1d66c223
+SamAccountName    : mlinton
+SID               : S-1-5-21-870862040-1620156008-3855394555-1123
+Surname           : Linton
+UserPrincipalName : mlinton@corp.test

@@ -1,0 +1,7 @@
+
+SamAccountName    : mlinton
+Enabled           : True
+LockedOut         : False
+PasswordExpired   : False
+PasswordLastSet   : 3/5/2026 1:23:46 PM
+UserPrincipalName : mlinton@corp.test

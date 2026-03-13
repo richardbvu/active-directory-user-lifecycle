@@ -1,0 +1,29 @@
+Project: Roadmap Phase 1, #1 — Active Directory User Lifecycle Lab
+
+Environment
+- DC1
+- CL1
+- Domain: corp.test
+
+Planned OUs
+- Corp Users
+- Corp Groups
+- Workstations
+- Admins
+- Disabled Users
+
+Planned Groups
+- GG-All-Staff
+- GG-Sales
+- GG-IT-Helpdesk
+- GG-Workstation-Users
+
+Planned Users
+- mlinton
+- psandoval
+- dhuerta
+- greilly
+
+Planned GPOs
+- Workstation-Baseline
+- Login-Security-Baseline

@@ -1,0 +1,65 @@
+# Disabled Account Login Verification
+
+## Purpose
+Use this runbook when a domain user cannot log in to a workstation because the Active Directory account is disabled.
+
+## Scope
+Windows domain-joined lab systems in `corp.test`.
+
+## Common Symptoms
+- Domain user unable to log in to a workstation
+- Login attempt fails during domain authentication
+- Workstation is reachable and domain joined
+- Other domain users can log in successfully
+
+## Quick Rule
+Always verify whether the user account is **enabled** before troubleshooting other authentication issues.
+
+A disabled account will prevent login even if:
+- the workstation is correctly joined to the domain
+- network connectivity is working
+- the user credentials are correct
+
+## Troubleshooting Steps
+
+### 1. Verify the user account exists
+Open **Active Directory Users and Computers** and confirm the user account exists in the expected OU.
+
+### 2. Check account status
+Look for the **disabled account indicator** on the user object.
+
+A disabled account will show the down-arrow icon in ADUC.
+
+### 3. Verify account status with PowerShell
+On the domain controller, run:
+
+	Get-ADUser username -Properties Enabled
+
+If the account is disabled the output will show:
+
+	Enabled : False
+
+### 4. Enable the account
+If the account is disabled, enable it using ADUC or PowerShell.
+
+ADUC method:
+- Right-click the user
+- Select **Enable Account**
+
+PowerShell method:
+
+	Enable-ADAccount username
+
+### 5. Validate login
+After enabling the account:
+- attempt login from the workstation again
+- confirm the user successfully authenticates
+
+### 6. Confirm account status
+Verify the account is now enabled:
+
+	Get-ADUser username -Properties Enabled
+
+Expected output:
+
+	Enabled : True

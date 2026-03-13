@@ -1,0 +1,22 @@
+# RDP Access Troubleshooting
+
+## Purpose
+Use this runbook when a domain user cannot sign in to a workstation through Remote Desktop.
+
+## Scope
+Windows domain-joined workstation in the lab environment.
+
+## Symptoms
+- User cannot sign in through RDP
+- RDP works for administrator but not for standard user
+- Group-based access was configured, but remote login still fails
+
+## Checks
+1. Confirm the target workstation is powered on and reachable
+2. Confirm Remote Desktop is enabled on the target workstation
+3. Confirm the user account is enabled in Active Directory
+4. Confirm the user is in the expected AD security group
+5. Confirm the intended access group is present in the local `Remote Desktop Users` group on the workstation
+6. Confirm the user is not being blocked by policy such as missing **Allow log on through Remote Desktop Services**
+7. After group or policy changes, sign out and test again with a fresh logon
+8. If needed, run `gpupdate /force` and retest

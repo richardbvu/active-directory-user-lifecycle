@@ -1,0 +1,6 @@
+Account login failed
+Checked ADUC
+Account was disabled
+Ran Get-ADUser
+Enabled account
+Login worked

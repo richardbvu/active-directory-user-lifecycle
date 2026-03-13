@@ -1,0 +1,22 @@
+Phase 1-1 Skills Demonstrated
+
+This phase demonstrates foundational IT support and Active Directory troubleshooting skills.
+
+Technical skills validated during this phase include:
+
+- Active Directory user account management
+- Workstation domain join validation
+- Group Policy baseline configuration and verification
+- DNS troubleshooting in domain environments
+- Remote Desktop access troubleshooting
+- Domain authentication validation
+
+Administrative tools and commands used during troubleshooting include:
+
+- Active Directory Users and Computers
+- Group Policy Management
+- ipconfig
+- nslookup
+- gpresult
+
+In addition to technical configuration and troubleshooting, this phase also demonstrates structured troubleshooting documentation practices including ticket creation, runbook development, and supporting evidence collection.

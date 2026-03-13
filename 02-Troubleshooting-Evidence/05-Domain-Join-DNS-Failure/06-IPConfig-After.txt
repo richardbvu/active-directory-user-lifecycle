@@ -1,0 +1,42 @@
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : W11VM
+   Primary Dns Suffix  . . . . . . . : corp.test
+   Node Type . . . . . . . . . . . . : Mixed
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+   DNS Suffix Search List. . . . . . : corp.test
+
+Ethernet adapter Ethernet:
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Microsoft Hyper-V Network Adapter
+   Physical Address. . . . . . . . . : 00-15-5D-38-01-01
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::e4e3:922f:8458:48b4%16(Preferred)
+   IPv4 Address. . . . . . . . . . . : 192.168.0.195(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Lease Obtained. . . . . . . . . . : Thursday, March 12, 2026 10:09:18 AM
+   Lease Expires . . . . . . . . . . : Thursday, March 12, 2026 12:09:17 PM
+   Default Gateway . . . . . . . . . : 192.168.0.1
+   DHCP Server . . . . . . . . . . . : 192.168.0.1
+   DHCPv6 IAID . . . . . . . . . . . : 234886493
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-31-10-77-85-00-15-5D-38-01-01
+   DNS Servers . . . . . . . . . . . : 8.8.8.8
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Ethernet adapter vEthernet (Default Switch):
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Hyper-V Virtual Ethernet Adapter
+   Physical Address. . . . . . . . . : 00-15-5D-C3-CA-5F
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::243f:4010:81ea:5569%17(Preferred)
+   IPv4 Address. . . . . . . . . . . : 172.18.224.1(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.240.0
+   Default Gateway . . . . . . . . . :
+   DHCPv6 IAID . . . . . . . . . . . : 285218141
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-31-10-77-85-00-15-5D-38-01-01
+   NetBIOS over Tcpip. . . . . . . . : Enabled

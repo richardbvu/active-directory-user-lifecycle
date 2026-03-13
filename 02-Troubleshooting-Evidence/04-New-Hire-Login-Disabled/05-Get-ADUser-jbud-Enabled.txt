@@ -1,0 +1,10 @@
+DistinguishedName : CN=Jason Bud,OU=Corp Users,OU=CORP1,DC=corp,DC=test
+Enabled           : True
+GivenName         : Jason
+Name              : Jason Bud
+ObjectClass       : user
+ObjectGUID        : 50b0e8c0-2d9d-447f-a839-fc50249c0531
+SamAccountName    : jbud
+SID               : S-1-5-21-870862040-1620156008-3855394555-1128
+Surname           : Bud
+UserPrincipalName : jbud@corp.test

@@ -1,0 +1,31 @@
+DNS test on W11VM
+Problem:
+Workstation could not reach domain services.
+
+Checked:
+DNS settings
+ipconfig /all
+nslookup corp.test
+
+Found:
+DNS was pointing to the wrong server.
+
+Fix:
+Changed DNS back to the domain controller IP.
+
+Result:
+corp.test resolved correctly again and domain services worked.
+
+Computer network startup flow (DHCP / DNS):
+
+Computer boots and loads the NIC (Network Interface Card).
+The NIC activates but does not yet have network settings such as IP address, gateway, or DNS.
+The computer sends a DHCP request asking for network configuration.
+The DHCP server responds with network settings such as:
+IP address
+subnet mask
+default gateway
+DNS server
+The computer applies these settings to the NIC.
+The computer uses the DNS server it received to resolve domain names such as corp.test.
+If DNS is correct, the computer can locate the domain controller and communicate with domain services.

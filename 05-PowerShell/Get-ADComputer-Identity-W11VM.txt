@@ -1,0 +1,16 @@
+Command:
+Get-ADComputer -Identity W11VM
+
+Purpose:
+Retrieve the Active Directory computer object for W11VM to verify its identity, status, and domain membership.
+
+Output:
+DistinguishedName : CN=W11VM,OU=Workstations,OU=CORP1,DC=corp,DC=test
+DNSHostName       : W11VM.corp.test
+Enabled           : True
+Name              : W11VM
+ObjectClass       : computer
+ObjectGUID        : d8586067-c8c7-4d8d-9ca1-da3d261bf248
+SamAccountName    : W11VM$
+SID               : S-1-5-21-870862040-1620156008-3855394555-1103
+UserPrincipalName :

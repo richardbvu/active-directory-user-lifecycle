@@ -1,0 +1,8 @@
+distinguishedName : CN=Domain Users,CN=Users,DC=corp,DC=test
+GroupCategory     : Security
+GroupScope        : Global
+name              : Domain Users
+objectClass       : group
+objectGUID        : 83fce09f-ca3b-486b-90cc-98e11d53cf0c
+SamAccountName    : Domain Users
+SID               : S-1-5-21-870862040-1620156008-3855394555-513

@@ -1,0 +1,73 @@
+[2026-03-04]
+Built or validated DC1 as domain controller for corp.test. Confirmed AD DS, DNS, Get-ADDomain, Get-ADForest, and nslookup corp.test all worked.
+
+Created OUs: Corp Users, Corp Groups, Workstations, Admins, Disabled Users
+Created groups: GG-All-Staff, GG-Sales, GG-IT-Helpdesk, GG-Workstation-Users
+
+[2026-03-05]
+Users created:
+- mlinton -> OU=Corp Users
+- dhuerta -> OU=Corp Users
+- psandoval -> OU=Corp Users
+- greilly -> OU=Admins
+
+Account setup:
+- UPN format used: <username>@corp.test
+- Accounts enabled at creation
+- Temporary password set
+- User must change password at next logon enabled
+
+Group membership:
+- mlinton -> GG-All-Staff, GG-Sales
+- dhuerta -> GG-All-Staff
+- psandoval -> GG-All-Staff
+- greilly -> GG-IT-Helpdesk
+
+Created users with temporary passwords and forced change at next logon (password not recorded in evidence)
+
+[2026-03-05] Backfilled evidence workstation for prior work completed before the official evidence-first workflow.
+
+Client workstation:
+- Computer name: W11VM
+- Domain: corp.test
+- Older OU tree "Corp" is treated as pre-plan / legacy structure
+- Current project OU tree is "Corp1"
+
+Reason:
+Collected and documented evidence for the workstation domain join that was completed earlier in the lab before the official Evidence-First workflow was implemented. Verified that the Windows 11 workstation remained joined to the corp.test domain and captured screenshots and command output to document the domain membership state for the project evidence folder.
+
+[2026-03-05]
+RDP policy for Corp1 workstations
+
+Reason:
+After moving W11VM from Corp to Corp1, RDP stopped working. The previous policy referenced restricted groups tied to the Corp OU. Created a new clean policy scoped to Corp1 to restore admin RDP access.
+
+[2026-03-06]
+Domain user login validation
+
+Reason:
+After configuring the workstation and verifying domain connectivity, tested successful login using a domain user account. Confirmed the machine was properly joined to the domain and that authentication through Active Directory worked as expected.
+
+[2026-03-07]
+User identity and group verification
+
+Reason:
+After successful domain login, verified the user account in Active Directory to confirm correct identity and group membership. Checked the user object and security groups to ensure the account was placed correctly and receiving the expected access permissions.
+
+[2026-03-08]
+Baseline workstation GPO creation
+
+Reason:
+Created a baseline Group Policy to standardize workstation behavior. The policy included Control Panel restrictions, inactivity timeout configuration, and Run menu restrictions. Linked the policy to the appropriate OU and validated policy application using gpupdate and gpresult.
+
+[2026-03-09]
+Group Policy application verification
+
+Reason:
+After linking the baseline workstation GPO, validated that the policy applied correctly to the workstation. Forced a policy refresh using gpupdate /force and checked applied policies using gpresult. Confirmed the expected policies appeared under the correct scope and verified that the workstation was receiving domain policy settings.
+
+[2026-03-10]
+User termination workflow – mlinton
+
+Reason:
+Simulated an offboarding scenario to document the Active Directory termination process. Captured the account state before termination, disabled the user account, removed group memberships where appropriate, and moved the account to the Disabled Users OU. Collected before/after evidence to document the lifecycle process.
