@@ -1,0 +1,11 @@
+While validating the Active Directory user lifecycle in my lab environment, I ran into an issue where a newly created domain user couldn’t log in to a workstation.
+
+The workstation was already joined to the corp.test domain, and network connectivity looked fine, so the failure wasn’t immediately obvious. Instead of assuming it was a connectivity or domain issue, I focused on verifying the user side.
+
+I opened Active Directory Users and Computers and confirmed that the user account had been created successfully. When I checked the account properties more closely, I noticed that the account was in a disabled state.
+
+Since a disabled account cannot authenticate, that explained why the login attempt was failing even though everything else in the environment was working correctly.
+
+I enabled the account and then went back to the workstation to test the login again. This time, the user was able to successfully authenticate.
+
+That situation reinforced the importance of checking basic account status early in troubleshooting, especially in user lifecycle scenarios, before assuming there are larger issues with the domain or network.

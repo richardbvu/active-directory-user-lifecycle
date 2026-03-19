@@ -1,6 +1,0 @@
-01-Build-Evidence
-02-Troubleshooting-Evidence
-03-Runbook
-04-Ticket-Pack
-05-PowerShell
-06-Resume-and-Interview

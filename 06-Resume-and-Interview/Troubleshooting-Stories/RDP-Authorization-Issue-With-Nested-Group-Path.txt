@@ -1,0 +1,13 @@
+While testing RDP access in my lab, I ran into a situation that helped me better understand the difference between a valid group design and an effective access path during troubleshooting.
+
+I had already created the user mlinton, and later I created a "Remote Workstation Users" group and nested "Workstation Users" into it. In principle, that design should have worked. A fresh logon is supposed to evaluate the user’s current group memberships, so the fact that the user account existed before the nested group was created was not the real issue.
+
+When the RDP login failed, I initially had to think through whether the problem was with the user account, the group design, or the way the target machine was evaluating access at that moment.
+
+The more I worked through it, the clearer it became that the failure was not caused by the age of the user account compared to the nested group. The nested design itself was valid. The problem was that the intended authorization path through the nested group membership was not becoming effective on the target machine the way I expected during that test.
+
+To isolate the problem, I added the non-nested group directly to the workstation’s "Remote Desktop Users" local group. That created a shorter and more obvious authorization path, and the login succeeded.
+
+That helped confirm that the issue was not that nested groups are wrong or unusable. Enterprises use nested groups all the time because they are easier to manage at scale. What this test showed me was that when access to a specific resource fails, you troubleshoot the effective access path, not just the design on paper.
+
+The main lesson I took from it was that my nested path was valid in principle, but it was not working effectively at the time of testing. The temporary direct group assignment was a troubleshooting shortcut that helped prove where the access path was breaking, not a sign that the nested model itself was flawed.

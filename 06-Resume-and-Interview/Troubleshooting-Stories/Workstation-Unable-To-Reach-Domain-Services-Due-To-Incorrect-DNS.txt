@@ -1,0 +1,9 @@
+While testing workstation connectivity to domain services in my lab, I intentionally changed the client’s DNS configuration to simulate a network-related issue.
+
+After making that change, the workstation was no longer able to resolve the corp.test domain. Since domain connectivity depends heavily on correct DNS, that immediately pointed me toward name resolution as the likely cause.
+
+To confirm it, I reviewed the network configuration with ipconfig /all and saw that the DNS server setting was incorrect. I then used nslookup corp.test, which confirmed that the workstation could not resolve the domain name.
+
+Once I corrected the DNS setting to point back to the domain controller, name resolution started working again and the workstation was able to reach domain services normally.
+
+That scenario reinforced how critical DNS is in an Active Directory environment, since even when the workstation is otherwise connected to the network, incorrect DNS can break access to core domain functions.

@@ -1,0 +1,11 @@
+Active Directory User Lifecycle - Skills Proven
+
+- Managed Active Directory user lifecycle tasks including account creation, modification, disabling, and validation
+- Validated workstation domain join status and confirmed successful authentication against the domain
+- Configured and verified baseline Group Policy settings for domain-joined workstations
+- Troubleshot DNS and domain connectivity issues affecting access to Active Directory services
+- Diagnosed remote access and RDP login issues in a domain environment
+- Identified and resolved account-state issues affecting user logon, including disabled accounts
+- Used command-line and administrative tools to validate system state and troubleshoot issues, including ipconfig, nslookup, gpresult, gpupdate, and net localgroup
+- Verified OU placement, GPO linkage, and policy scope during Group Policy troubleshooting
+- Documented troubleshooting work using structured tickets, runbooks, evidence capture, and repeatable support workflows

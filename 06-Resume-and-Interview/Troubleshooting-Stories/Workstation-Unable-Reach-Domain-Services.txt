@@ -1,7 +1,0 @@
-Workstation Unable to Reach Domain Services Due to Incorrect DNS
-
-While testing workstation connectivity to domain services in my lab, I changed the client’s DNS configuration to simulate a network issue.
-
-After the change, the workstation could no longer resolve the corp.test domain. I verified the network configuration with ipconfig /all and confirmed the DNS server was incorrect. I then used nslookup corp.test, which confirmed that domain name resolution was failing.
-
-After correcting the DNS setting to point back to the domain controller, name resolution worked again and the workstation could reach domain services.

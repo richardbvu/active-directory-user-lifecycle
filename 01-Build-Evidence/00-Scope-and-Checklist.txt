@@ -1,4 +1,4 @@
-Project: Roadmap Phase 1, #1 — Active Directory User Lifecycle Lab
+Active Directory User Lifecycle Lab
 
 Environment
 - DC1

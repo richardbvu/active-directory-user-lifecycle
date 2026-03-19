@@ -1,4 +1,4 @@
-# Phase 1A — Active Directory Support Lab
+# Active Directory Support Lab
 
 ## Overview
 This project documents the build, validation, and troubleshooting of a Active Directory lab environment.

@@ -5,7 +5,7 @@ This created uncertainty about whether the workstation baseline policy was being
 
 Symptoms:
 
-* Baseline workstation GPO appeared not to apply when running `gpresult /r`.
+* Baseline workstation GPO appeared not to apply when running "gpresult /r".
 * No policies visible under **User Settings**.
 * Workstation configuration changes expected from GPO were not immediately confirmed.
 

@@ -1,5 +1,0 @@
-While validating the Active Directory user lifecycle in my lab environment, I encountered a scenario where a newly created domain user could not log in to the workstation. The login attempt failed even though the workstation was correctly joined to the corp.test domain and network connectivity was working.
-
-To troubleshoot the issue, I verified that the user account existed in Active Directory and checked the account properties in Active Directory Users and Computers. I noticed the account was in a disabled state. I confirmed the account status and enabled it.
-
-After enabling the account, I retested the login from the workstation and confirmed the user could successfully authenticate. The issue was caused by the account being disabled in Active Directory, which prevented authentication even though the rest of the environment was functioning correctly.

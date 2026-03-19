@@ -1,0 +1,13 @@
+While validating a workstation Group Policy in my Active Directory lab, it initially looked like the policy wasn’t applying.
+
+I ran gpresult /r and didn’t see the expected GPO under the results, which made it seem like the policy had failed. Before assuming there was a configuration issue, I walked through the usual checks. I confirmed the workstation was in the correct OU, verified that the GPO was properly linked, and forced a policy refresh using gpupdate /force.
+
+Even after that, the results still didn’t show what I expected. That’s when I took a closer look at what I was actually reviewing in the output.
+
+I realized I had been looking at the User Settings section, but the policy I configured was under Computer Configuration and linked to the Workstations OU.
+
+To validate that, I ran gpresult /scope computer /r and checked the Computer Settings section. This time, the GPO showed up as expected.
+
+So the issue wasn’t that the GPO failed to apply. I was just validating the wrong scope in the results.
+
+That situation reinforced the importance of understanding the difference between user and computer policies when troubleshooting Group Policy, and making sure the validation method matches the type of policy being tested.
