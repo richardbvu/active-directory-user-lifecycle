@@ -1,4 +1,4 @@
-# Active Directory Support Lab
+# Active Directory User Lifecycle Lab
 
 ## Overview
 This project documents the build, validation, and troubleshooting of a Active Directory lab environment.
