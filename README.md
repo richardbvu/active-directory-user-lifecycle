@@ -23,7 +23,7 @@ Recommended files and folders to review first:
 
 - [04-Ticket-Pack](./04-Ticket-Pack/)
 - [03-Runbook](./03-Runbook/)
-- [05-Resume-and-Interview](./05-Resume-and-Interview/)
+- [06-Resume-and-Interview](./06-Resume-and-Interview/)
 
 ## Skills Demonstrated
 - Active Directory administration and user lifecycle management  
@@ -40,5 +40,6 @@ Recommended files and folders to review first:
 - [01-Build-Evidence](./01-Build-Evidence/) — healthy-state build validation  
 - [02-Troubleshooting-Evidence](./02-Troubleshooting-Evidence/) — raw notes, screenshots, and observations  
 - [03-Runbook](./03-Runbook/) — reusable troubleshooting procedures (only where applicable)  
-- [04-Ticket-Pack](./04-Ticket-Pack/) — polished ticket write-ups  
-- [05-Resume-and-Interview](./05-Resume-and-Interview/) — project packaging for job search  
+- [04-Ticket-Pack](./04-Ticket-Pack/) — polished ticket write-ups
+- [05-PowerShell](./05-PowerShell/) — PowerShell command-based validation used for administration, verification, and troubleshooting
+- [06-Resume-and-Interview](./06-Resume-and-Interview/) — project packaging for job search  
